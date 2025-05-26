@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"log"
+	"github.com/charmbracelet/log"
 	"time"
 
 	"github.com/pnocera/gomem/pkg/graphs"

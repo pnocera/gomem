@@ -1,7 +1,7 @@
-package nats
+package natsclient
 
 import (
-	"log"
+	"github.com/charmbracelet/log"
 	"time"
 
 	"github.com/nats-io/nats.go"
@@ -25,7 +25,7 @@ func Connect(natsURL string, opts ...nats.Option) (*nats.Conn, error) {
 			log.Printf("NATS client reconnected to %s", nc.ConnectedUrl())
 		}),
 		nats.ClosedHandler(func(nc *nats.Conn) {
-			log.Println("NATS client connection closed.")
+			log.Info("NATS client connection closed.")
 		}),
 	}
 
